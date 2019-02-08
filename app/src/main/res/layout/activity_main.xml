@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/arkaplan"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <WebView
+            android:id="@+id/web_stream"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/btnConnect"
+            android:layout_width="43dp"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:background="?android:selectableItemBackground"
+            app:srcCompat="@android:drawable/ic_media_play"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="343dp" />
+
+        <ImageButton
+            android:id="@+id/OpenCV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/mdpi" />
+
+        <ImageButton
+            android:id="@+id/btnVoice"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignBottom="@+id/btnGlide"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="-6dp"
+            android:layout_marginStart="155dp"
+            android:elevation="0dp"
+            app:srcCompat="@android:drawable/ic_btn_speak_now" />
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@android:drawable/ic_lock_power_off" />
+
+        <TextView
+            android:id="@+id/txtPop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="KartalGözü-Synthesis by Halil İbrahim İLHAN"
+            android:textAppearance="@style/TextAppearance.AppCompat.Inverse" />
+
+        <Button
+            android:id="@+id/btnGlide"
+            style="@android:style/Widget.Holo.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="93dp"
+            android:text="Süzülme Modu"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <RelativeLayout
+            android:layout_width="244dp"
+            android:layout_height="51dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="45dp"
+            android:layout_marginStart="220dp"
+            tools:layout_editor_absoluteX="213dp"
+            tools:layout_editor_absoluteY="285dp">
+
+            <TextView
+                android:id="@+id/txtPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:text="GÜÇ SEVİYESİ:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse" />
+
+            <TextView
+                android:id="@+id/txtRotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="YÖN:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="277dp"
+            android:layout_height="290dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="14dp"
+            tools:layout_editor_absoluteX="390dp"
+            tools:layout_editor_absoluteY="96dp">
+
+            <Button
+                android:id="@+id/btnDownLeft"
+                style="@android:style/Widget.Holo.Button.Small"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@+id/btnDown"
+                android:layout_alignStart="@+id/btnUpLeft"
+                android:elevation="0dp"
+                android:text="↙" />
+
+            <Button
+                android:id="@+id/btnDownRight"
+                style="@android:style/Widget.Holo.Button.Small"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@+id/btnDown"
+                android:layout_alignStart="@+id/btnUpRight"
+                android:elevation="0dp"
+                android:text="↘ " />
+
+            <Button
+                android:id="@+id/btnUpRight"
+                style="@android:style/Widget.Holo.Button.Small"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@+id/btnUp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="38dp"
+                android:elevation="0dp"
+                android:text="↗" />
+
+            <Button
+                android:id="@+id/btnUpLeft"
+                style="@android:style/Widget.Holo.Button.Small"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@+id/btnUp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="38dp"
+                android:elevation="0dp"
+                android:text="↖ " />
+
+            <Button
+                android:id="@+id/btnUp"
+                style="@android:style/Widget.Holo.Button.Small"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_above="@+id/btnRight"
+                android:layout_toStartOf="@+id/btnRight"
+                android:elevation="0dp"
+                android:text="Yukarı" />
+
+            <Button
+                android:id="@+id/btnDown"
+                style="@android:style/Widget.Holo.Button.Small"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/btnRight"
+                android:layout_toStartOf="@+id/btnRight"
+                android:text="Aşağı" />
+
+            <Button
+                android:id="@+id/btnLeft"
+                style="@android:style/Widget.Holo.Button.Small"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/btnUp"
+                android:text="Sol" />
+
+            <Button
+                android:id="@+id/btnRight"
+                style="@android:style/Widget.Holo.Button.Small"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="19dp"
+                android:text="Sağ"
+                android:textAppearance="@android:style/TextAppearance.Material.Small" />
+
+            <TextView
+                android:id="@+id/txtD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="RK"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                tools:text="RK" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="257dp"
+            android:layout_height="63dp"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="Kartal'ın IP adresini giriniz."
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                tools:layout_editor_absoluteX="205dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <EditText
+                android:id="@+id/ipAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:backgroundTint="#ffffff"
+                android:ems="10"
+                android:hint="Enter some inputs"
+                android:inputType="textPersonName"
+                android:text="192.168.2.189:21567"
+                android:textColor="#ffffff" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="132dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp">
+
+            <Button
+                android:id="@+id/btnTurbo"
+                style="@android:style/Widget.Holo.Button.Small"
+                android:layout_width="94dp"
+                android:layout_height="48dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="Turbo"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                tools:layout_editor_absoluteX="42dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="53dp"
+                tools:layout_editor_absoluteY="51dp">
+
+                <Button
+                    android:id="@+id/btnSeven"
+                    style="@android:style/Widget.Holo.Button.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/btnSix"
+                    style="@android:style/Widget.Holo.Button.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="6" />
+
+                <Button
+                    android:id="@+id/btnFive"
+                    style="@android:style/Widget.Holo.Button.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/btnFour"
+                    style="@android:style/Widget.Holo.Button.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/btnThree"
+                    style="@android:style/Widget.Holo.Button.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3" />
+
+                <Button
+                    android:id="@+id/btnTwo"
+                    style="@android:style/Widget.Holo.Button.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/btnOne"
+                    style="@android:style/Widget.Holo.Button.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
